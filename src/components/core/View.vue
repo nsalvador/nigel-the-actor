@@ -2,8 +2,8 @@
   <v-content class="blue-grey lighten-3">
     <v-container>
       <div style="min-width:296px; max-width:744px; margin:0 auto;">
-        <v-card flat tile class="transparent">
-          <v-card-title>Upcoming Events</v-card-title>
+        <v-card flat tile class="transparent" v-if="upcoming_events.length !== 0">
+          <v-card-title class="py-0 pb-2">Upcoming Events</v-card-title>
         </v-card>
         <v-card
           v-for="(event, i) in upcoming_events"
@@ -11,12 +11,12 @@
           :class="i + 1 !== upcoming_events.length && 'mb-3'"
           elevation="12"
         >
-          <v-card-title v-text="event.title" />
+          <v-card-title v-text="event.title" class="pt-2" />
           <v-card-subtitle v-html="event.subtitle" class="text-truncate" />
           <v-card-text v-html="event.description" />
         </v-card>
         <v-card flat tile class="transparent" v-if="past_events.length !== 0">
-          <v-card-title class="px-0">Past Events</v-card-title>
+          <v-card-title class="py-0 pb-2">Past Events</v-card-title>
         </v-card>
         <v-card
           v-for="(event, j) in past_events"
@@ -33,23 +33,7 @@
 </template>
 
 <script>
-// import $clamp from 'clamp-js';
-
 export default {
-  // mounted() {
-  // 	this.setLineClamp();
-  // },
-  // methods: {
-  // 	setLineClamp() {
-  // 		document.getElementsByClassName('v-card__text').forEach(card => {
-  // 			$clamp(card, {
-  // 				clamp: 4,
-  // 				useNativeClamp: false,
-  // 				truncationChar: '   ...   '
-  // 			});
-  // 		});
-  // 	}
-  // },
   data: () => ({
     upcoming_events: [
       {
@@ -57,7 +41,7 @@ export default {
         subtitle:
           '<span class="font-weight-bold">Date:</span> April 3, 2020 &mdash; April 25, 2020',
         description: `
-					Come and enjoy dinner and a show at <a target="_blank" href="https://alcoverestaurant.com/index.php/en/">The Alcove</a> where I will be featured as Bill in a <a target="_blank" href="https://www.mtvarts.com/">MTVarts</a> theatrical production of On Golden Pond. Follow the <a target="_blank" href="https://alcoverestaurant.com/index.php/en/tickets/on-golden-pond">link</a> for showtimes and to purchase your tickets.`
+					Come and enjoy dinner and a show at <a target="_blank" href="https://alcoverestaurant.com/index.php/en/">The Alcove</a> where I will be featured as Bill in a <a target="_blank" href="https://www.mtvarts.com/">MTVarts</a> theatrical production of <a target="_blank" href="https://en.wikipedia.org/wiki/On_Golden_Pond_(play)">On Golden Pond</a>. Follow the <a target="_blank" href="https://alcoverestaurant.com/index.php/en/tickets/on-golden-pond">link</a> for showtimes and to purchase your tickets.`
       }
       // {
       // 	title: 'When Your Soul Cries',
