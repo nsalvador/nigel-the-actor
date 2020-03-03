@@ -12,7 +12,10 @@
           elevation="12"
         >
           <v-card-title v-text="event.title" class="pt-2" />
-          <v-card-subtitle v-html="event.subtitle" class="text-truncate" />
+          <v-card-subtitle class="text-truncate">
+            <v-icon x-small>mdi-calendar-range</v-icon>&nbsp;
+            <span v-html="event.subtitle"></span>
+          </v-card-subtitle>
           <v-card-text v-html="event.description" />
         </v-card>
         <v-card flat tile class="transparent" v-if="past_events.length !== 0">
@@ -38,8 +41,7 @@ export default {
     upcoming_events: [
       {
         title: "On Golden Pond",
-        subtitle:
-          '<span class="font-weight-bold">Date:</span> April 3, 2020 &mdash; April 25, 2020',
+        subtitle: "April 3, 2020 &mdash; April 25, 2020",
         description: `
 					Come and enjoy dinner and a show at <a target="_blank" href="https://alcoverestaurant.com/index.php/en/">The Alcove</a> where I will be featured as Bill in a <a target="_blank" href="https://www.mtvarts.com/">MTVarts</a> theatrical production of <a target="_blank" href="https://en.wikipedia.org/wiki/On_Golden_Pond_(play)">On Golden Pond</a>. Follow the <a target="_blank" href="https://alcoverestaurant.com/index.php/en/tickets/on-golden-pond">link</a> for showtimes and to purchase your tickets.`
       }

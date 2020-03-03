@@ -7,11 +7,11 @@
         <v-card-text v-html="contact" class="overline px-2 py-1 white--text"></v-card-text>
         <v-card-actions class="pa-2 pt-1 d-flex justify-center" v-if="icons.length !== 0">
           <v-btn v-for="(icon, key) in icons" :key="key" icon x-small class="ma-0">
-            <v-icon v-text="icon"></v-icon>
+            <v-icon v-text="icon" />
           </v-btn>
         </v-card-actions>
-        <v-divider style="width: 37.5%; margin: auto" class="white my-2"></v-divider>
-        <v-card-text v-html="copyright" class="overline pa-2 white--text"></v-card-text>
+        <v-divider style="width: 37.5%; margin: auto" class="white my-2" />
+        <v-card-text v-html="copyright" class="overline px-2 py-1 white--text" />
       </v-card>
     </v-container>
   </v-footer>
