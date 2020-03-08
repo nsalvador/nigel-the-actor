@@ -14,6 +14,6 @@ git add -A
 git commit -m 'deploy'
 
 # deploy
-git push -f git@github.com:nsalvador/nigel-david.git master:gh-pages
+git push -f git@github.com:nsalvador/nigel-the-actor.git master:gh-pages
 
 cd -
