@@ -22,7 +22,7 @@ import { mapState, mapMutations } from "vuex";
 export default {
   name: "Header",
   data: () => ({
-    title: "Nigel The Actor"
+    title: "Nigel David"
   }),
   methods: {
     ...mapMutations(["toggleDrawer"])

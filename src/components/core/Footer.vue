@@ -11,7 +11,7 @@
           </v-btn>
         </v-card-actions>
         <v-divider style="width: 37.5%; margin: auto" class="white my-2" />
-        <v-card-text v-html="copyright" class="overline px-2 py-1 white--text" />
+        <v-card-text v-html="copyright" class="overline pa-2 pt-1 white--text" />
       </v-card>
     </v-container>
   </v-footer>
