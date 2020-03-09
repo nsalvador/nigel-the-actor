@@ -16,6 +16,6 @@ const routes = [
 
 export default new Router({
 	mode: 'history',
-	base: process.env.NODE_ENV === 'production' ? 'nigel-the-actor' : '/',
+	base: process.env.NODE_ENV === 'production' ? '/nigel-the-actor/' : '/',
 	routes
 });
