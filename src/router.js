@@ -11,10 +11,6 @@ const routes = [
 	{
 		path: '/on-golden-pond',
 		component: () => import('./views/On-Golden-Pond.vue')
-	},
-	{
-		path: '*',
-		component: () => import('./views/NotFound.vue')
 	}
 ];
 
