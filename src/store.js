@@ -3,36 +3,32 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-	state: {
-		drawer: false,
-		links: [
-			{
-				text: 'Home',
-				icon: 'mdi-home',
-				href: '#'
-			}
-			// {
-			// 	text: 'About',
-			// 	icon: 'mdi-account',
-			// 	href: '#about'
-			// },
-			// {
-			// 	text: 'Events',
-			// 	icon: 'mdi-calendar-multiple',
-			// 	href: '#events'
-			// }
-		]
-	},
-	getters: {
-		getLinks: state => state.links
-	},
-	mutations: {
-		setDrawer: (state, payload) => {
-			state.drawer = payload;
-		},
-		toggleDrawer: state => {
-			state.drawer = !state.drawer;
+const state = {
+	drawer: false,
+	links: [
+		{
+			text: 'Home',
+			icon: 'mdi-home',
+			to: '/'
 		}
+	]
+};
+
+const getters = {
+	GET_LINKS: state => state.links
+};
+
+const mutations = {
+	SET_DRAWER: (state, payload) => {
+		state.drawer = payload;
+	},
+	TOGGLE_DRAWER: state => {
+		state.drawer = !state.drawer;
 	}
+};
+
+export default new Vuex.Store({
+	state,
+	getters,
+	mutations
 });

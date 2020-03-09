@@ -8,9 +8,10 @@
           v-for="(link, i) in links"
           :key="i"
           text
+          :to="link.to"
           class="ma-1 hidden-sm-and-down"
         >{{ link.text }}</v-btn>
-        <v-app-bar-nav-icon class="hidden-md-and-up" @click="toggleDrawer" />
+        <v-app-bar-nav-icon class="hidden-md-and-up" @click="TOGGLE_DRAWER" />
       </div>
     </v-container>
   </v-app-bar>
@@ -25,7 +26,7 @@ export default {
     title: "Nigel David"
   }),
   methods: {
-    ...mapMutations(["toggleDrawer"])
+    ...mapMutations(["TOGGLE_DRAWER"])
   },
   computed: {
     ...mapState(["links"])

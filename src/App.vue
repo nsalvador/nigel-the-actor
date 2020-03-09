@@ -12,7 +12,6 @@ export default {
   name: "App",
   mounted() {
     document.documentElement.style.overflow = "auto";
-    // this.$vuetify.theme.dark = true;
   },
   components: {
     AppHeader: () => import("./components/core/Header.vue"),
@@ -23,7 +22,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style>
 @import url("https://fonts.googleapis.com/css?family=Walter+Turncoat:100,300,400,500,700,900&display=swap");
 #app {
   font-family: "Walter Turncoat", cursive;
